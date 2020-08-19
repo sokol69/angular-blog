@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { PostService } from 'src/app/shared/post.service';
 import { Subscription } from 'rxjs';
+
 import { Post } from 'src/app/shared/interfaces';
 
 @Component({
@@ -12,6 +13,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
 
   posts: Post[] = []
   pSub: Subscription
+  searchStr = ''
 
   constructor(private postsService: PostService) { }
 
